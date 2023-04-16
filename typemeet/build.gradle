@@ -19,12 +19,30 @@ repositories {
 }
 
 dependencies {
+	/* gradle 수정하면 [Gradle -> Refresh Gradle Project]를 선택하여 필요한 라이브러리를 다운로드 할 것 */
+	
+	
+	/* 프로젝트 생성하면서 함께 생성한 것들 */
+	// JPA
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	// Spring WEB
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	// lombok
 	compileOnly 'org.projectlombok:lombok'
-	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
+	// h2
+	runtimeOnly 'com.h2database:h2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	
+	
+	/* 프로젝트 진행하면서 추가한 것들 */
+	
+	/*
+	developmentOnly : 개발환경에만 적용되는 설정이다. 즉, 운영환경에 배포되는 jar, war 파일에는 developmentOnly로 설치된 라이브러리는 제외된다.
+	*/
+	
+	// Spring Boot Devtools ( 클래스 수정했을때 자동으로 서버 재기동해줌 - 그외다른기능들도있음 )
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 }
 
 tasks.named('test') {
