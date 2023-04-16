@@ -2,7 +2,7 @@
 mbti 를 중심으로 한 소개팅 사이트
 
 
-# Project Setting
+# Project Setting - Backend
 
 0. version
 springboot = '3.0.5'
